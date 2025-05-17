@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Courses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<style>
+    body {
+        background-color: #f8f9fa;
+        padding-top: 0; /* Removido o padding superior */
+    }
+    
+    .card-deck {
+        margin: 20px 0;
+    }
+    
+    .card {
+        margin-top: 30px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+    }
+    
+    .card-body {
+        padding: 25px;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #343a40;
+        margin-bottom: 20px;
+    }
+    
+    .card-text {
+        color: #6c757d;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .card-footer {
+        background-color: white;
+        border-top: none;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 15px 25px;
+    }
+    
+    .text-muted {
+        font-size: 0.8rem;
+    }
+    
+    .badge {
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+    
+    .price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #28a745;
+        margin: 20px 0;
+    }
+    
+    .btn-enroll {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-enroll:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+    }
+    
+    .feature-icon {
+        margin-right: 8px;
+        color: #007bff;
+    }
+    
+    @media (max-width: 768px) {
+        .card-deck {
+            flex-direction: column;
+        }
+        
+        .card {
+            margin-bottom: 30px;
+        }
+    }
+    
+    footer {
+      margin-top: 40px; /* Reduzido de 260px para 40px */
+      padding: 20px;
+      background-color: #F8A17D;
+      color: white;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #F8A17D !important;
+      margin-bottom: 20px; /* Adicionado espaçamento abaixo da navbar */
+    }
+
+    .nav-link {
+      color: #5A453E !important;
+    }
+
+    .nav-link:hover {
+      color: #8EA88A !important;
+    }
+    
+    .navbar-nav .nav-item.active .nav-link {
+      color: #D93B2B !important;
+      font-weight: 600;
+    }
+
+    .container {
+        padding-bottom: 20px; /* Adicionado espaçamento na parte inferior do container */
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <img src="img/imagem 2.png" alt="" width="45" />
+    <a class="navbar-brand" href="#">Cajueiro Tech</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cajueiro.html">Sobre Nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="cursos.html">Cursos</a>
+          </li>
+        
+        
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top" src="img/Webinar-pana.png" alt="Startup One Course">
+              <div class="card-body">
+                <h5 class="card-title">Startup One</h5>
+                <p class="card-text">🎓 Transforme seu conhecimento em resultados!</p>
+                <p class="card-text">Aprenda no seu ritmo, onde e quando quiser, com conteúdos organizados para facilitar o seu avanço. Tudo pensado para tornar o aprendizado mais leve, prático e eficiente.</p>
+                <div class="features">
+                    <p class="card-text"><i class="fas fa-video feature-icon"></i> Aulas em vídeo para aprender no seu ritmo.</p>
+                    <p class="card-text"><i class="fas fa-file-alt feature-icon"></i> Apostilas digitais que reforçam cada conteúdo.</p>
+                <br><br><br><br><br><br><br><br>
+                </div>
+                <div class="price">R$ 199,90</div>
+                <button class="btn btn-enroll">Inscreva-se Agora</button>
+              </div>
+              
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="img/Webinar-bro.png" alt="Startup Master Course">
+              <div class="card-body">
+                <h5 class="card-title">Startup Master</h5>
+                <p class="card-text">🚀 Aprenda a construir produtos do zero com o apoio que você precisa!</p>
+                <p class="card-text">Este curso foi feito para quem quer ir além da teoria. Com vídeos explicativos, apostilas completas e mentorias exclusivas, você vai aprender, na prática, como tirar ideias do papel e transformar em produtos reais e funcionais.</p>
+                <div class="features">
+                    <p class="card-text"><i class="fas fa-video feature-icon"></i> Aulas em vídeo para aprender no seu ritmo.</p>
+                    <p class="card-text"><i class="fas fa-file-alt feature-icon"></i> Apostilas digitais que reforçam cada conteúdo.</p>
+                    <p class="card-text"><i class="fas fa-chalkboard-teacher feature-icon"></i> Mentorias sobre construção de produtos e outros cursos.</p>
+                    <br><br><br><br><br>
+                </div>
+                <div class="price">R$ 499,90</div>
+                <button class="btn btn-enroll">Inscreva-se Agora</button>
+              </div>
+             
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="img/Online learning-cuate.png" alt="Startup Master Pro Course">
+              <div class="card-body">
+                <h5 class="card-title">Startup Master Pro</h5>
+                <p class="card-text">🌟 Tudo o que você precisa para construir sua startup do zero!</p>
+                <p class="card-text">Este pacote completo reúne todos os benefícios anteriores e vai além: agora você também aprende como criar e estruturar uma startup do zero, com apoio de materiais extras focados em aceleração e crescimento.</p>
+                <div class="features">
+                    <p class="card-text"><i class="fas fa-rocket feature-icon"></i> Conteúdos exclusivos sobre criação de startups</p>
+                    <p class="card-text"><i class="fas fa-chart-line feature-icon"></i> Materiais extras de aceleração e crescimento</p>
+                    <p class="card-text"><i class="fas fa-video feature-icon"></i> Vídeos, apostilas e mentorias completas</p>
+                    <p class="card-text"><i class="fas fa-graduation-cap feature-icon"></i> Acesso a cursos complementares</p>
+                    <p class="card-text"><i class="fas fa-gift feature-icon"></i> Cursos extras incluídos, sem custo adicional</p>
+                    <br>
+                </div>
+                <div class="price">R$ 899,90</div>
+                <button class="btn btn-enroll">Inscreva-se Agora</button>
+              </div>
+              
+            </div>
+          </div>
+    </div>
+    <footer>
+        &copy; 2025 Cajueiro Tech — Todos os direitos reservados.
+    </footer>
+</body>
+</html>

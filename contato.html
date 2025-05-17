@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cajueiro Tech - Contato</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #FFFAF2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #5A453E;
+    }
+
+    .section-title {
+      color: #5A453E;
+      border-bottom: 2px solid #A0B79B;
+      padding-bottom: 10px;
+      display: inline-block;
+      margin-bottom: 30px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .contact-container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    .form-control:focus {
+      border-color: #A0B79B;
+      box-shadow: 0 0 0 0.2rem rgba(160, 183, 155, 0.25);
+    }
+
+    .btn-submit {
+      background-color: #A0B79B;
+      border: none;
+      padding: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #8EA88A;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+
+    .is-invalid {
+      border-color: #dc3545;
+    }
+
+    .invalid-feedback {
+      color: #dc3545;
+      font-size: 0.85rem;
+    }
+
+    .alert-success {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+      color: #155724;
+    }
+
+    .alert-danger {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+      color: #721c24;
+    }
+
+    footer {
+      margin-top: 260px;
+      padding: 20px;
+      background-color: #F8A17D;
+      color: white;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: #F8A17D !important;
+    }
+
+    .nav-link {
+      color: #5A453E !important;
+    }
+
+    .nav-link:hover {
+      color: #8EA88A !important;
+    }
+    .navbar-nav .nav-item.active .nav-link {
+  color: #D93B2B !important; /* vermelho caju maduro ou uma variação viva */
+  font-weight: 600;
+}
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <img src="img/imagem 1.png" alt="" width="45" />
+    <a class="navbar-brand" href="#">Cajueiro Tech</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cajueiro.html">Sobre Nós</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Programas de curso
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="cursos.html">Startup One</a>
+            <a class="dropdown-item" href="cursos.html">Startup Plus</a>
+            <a class="dropdown-item" href="cursos.html">Startup Master</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="contact-container">
+      <h3 class="section-title">📬 Fale Conosco</h3>
+      <div id="formAlert" style="display: none;"></div>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="firstName">Primeiro nome</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Nome" required />
+            <div class="invalid-feedback">Por favor, insira seu nome.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="lastName">Sobrenome</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Sobrenome" required />
+            <div class="invalid-feedback">Por favor, insira seu sobrenome.</div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="E-mail" required />
+            <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Assunto</label>
+          <textarea class="form-control" id="subject" rows="2" placeholder="Escreva o assunto aqui..." required></textarea>
+          <div class="invalid-feedback">Por favor, escreva o assunto.</div>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          <div class="invalid-feedback">Por favor, escreva sua mensagem.</div>
+        </div>
+        <button class="btn btn-submit btn-block" type="submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Cajueiro Tech — Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const inputs = document.querySelectorAll('.form-control');
+      inputs.forEach(input => input.classList.remove('is-invalid'));
+
+      let isValid = true;
+      const firstName = document.getElementById('firstName');
+      const lastName = document.getElementById('lastName');
+      const email = document.getElementById('email');
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+
+      if (!firstName.value) firstName.classList.add('is-invalid'), isValid = false;
+      if (!lastName.value) lastName.classList.add('is-invalid'), isValid = false;
+      if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) email.classList.add('is-invalid'), isValid = false;
+      if (!subject.value) subject.classList.add('is-invalid'), isValid = false;
+      if (!message.value) message.classList.add('is-invalid'), isValid = false;
+
+      const alertDiv = document.getElementById('formAlert');
+
+      if (isValid) {
+        alertDiv.innerHTML = `
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Sucesso!</strong> Mensagem enviada com sucesso! Entraremos em contato em breve.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>`;
+        alertDiv.style.display = 'block';
+        this.reset();
+        setTimeout(() => alertDiv.style.display = 'none', 5000);
+      } else {
+        alertDiv.innerHTML = `
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Erro!</strong> Por favor, preencha todos os campos corretamente.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>`;
+        alertDiv.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
